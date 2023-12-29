@@ -1,4 +1,6 @@
 
+/* GENERAL */
+
 body {
     /* Ici on utilise le sélecteur body pour appliquer une police et une taille par défaut pour les éléments */
     font-family: 'Manrope', sans-serif;
@@ -8,8 +10,6 @@ body {
 * {
     margin: 0;
 }
-
-
 a {
     color:black;
     text-decoration: none;
@@ -17,72 +17,85 @@ a {
 a:hover{
     text-decoration: underline;
 }
-.violet:hover{
-    background-color: linear-gradient(#696484, #8788BA);
-    text-decoration: none;
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    color: #A5B4FC;}
+h2{
+        color: #F9F8FF;
+}
+p,li{
+        font-family: 'Manrope', sans-serif;
+        font-size: 1.1em;
+        color: #F9F8FF;
+}
+section{
+    padding: 80px;
+    margin: 70px;
 }
 em {
     color: #a5b4fc;
     font-style: normal;
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.5em;
-    color: #A5B4FC;
-}
-h2{
-    color: #F9F8FF;
-}
-p,li{
-    font-family: 'Manrope', sans-serif;
-    font-size: 1.1em;
-    color: #F9F8FF;
-}
-/* div{
-    font-family: 'Manrope', sans-serif;
-    font-size: 1em;
-    text-decoration: none;
+/* FOOTER ET HEADER  */
+
+footer, header{
     background-color: white;
-    color: #242424;
-} */
+    padding: 20px 50px 20px 50px;
+}
+footer img:hover, header img:hover{
+    opacity: 0.5;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu a {
+    margin: 0 50px;
+    text-decoration: none;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.logo-footer a {
+    margin: 0 20px;
+}
+
+
+/* ENCADRE VIOLET */
 
 div .violet, .texte-accueil .violet {
     background: linear-gradient(#8e86b5, #acaeed);
     color: white;
     border-radius: 50px;
     padding: 20px 30px;
-    display: inline-block; /* Permet d'appliquer padding et margin */
+    display: inline-block; /* On le définit block, ce qui permet d'appliquer padding et margin mais aussi en inline pour le laisser à la suite*/
     margin-top: 20px; /* Espace au-dessus du bouton */
 }
-footer, header{
-    background-color: white;
-    padding: 20px 50px 20px 50px;
+.violet:hover{
+    background-color: linear-gradient(#696484, #8788BA);
+    text-decoration: none;
 }
-.cadre{
-    border-right: 1px #8e86b5 solid;
-    border-bottom: 1px #8e86b5 solid;
-    background-color: #1F2039;
-    padding: 50px;
+
+/* PAGE ACCUEIL */
+
+.description-accueil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Espace autour du contenu */
+    gap: 170px; /* Espace entre les éléments flex */
 }
-footer img:hover, header img:hover{
-    opacity: 0.5;
-}
-/* .lien-icone:hover {
-    opacity: 0.5; */
-section{
-    padding: 80px;
-    margin: 70px;
-}
-.a-propos-main {
-    width: 50%;
-    margin: auto;
-}
-.cadre h2{
-    margin-top: 30px;
-}
-.cadre ul{
-    margin-top: 30px;
+.texte-accueil {
+    max-width: 30%; /* Maximum 25% de la largeur du conteneur */
 }
 section[class="mon-dernier-projet"], section[class="portfolio-section-photos"]{
     background-color: white;
@@ -94,30 +107,6 @@ section[class="mon-dernier-projet"] h2 {
     text-align: center;
     font-size: 2.4em;
 }
-header nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.menu{
-    display: flex;
-    justify-content: flex-end;
-}
-.menu a {
-    margin: 0 50px;
-    text-decoration: none;
-}
-.description-accueil{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Espace autour du contenu */
-    gap: 170px; /* Espace entre les éléments flex */
-}
-.texte-accueil {
-    max-width: 30%; /* Maximum 25% de la largeur du conteneur */
-
-}
 .projet-photos{
     display: flex;
     justify-content: center;
@@ -127,12 +116,33 @@ header nav{
     flex-wrap: wrap;
 }
 
+/* PAGE A PROPOS */
+
+.cadre{
+    border-right: 1px #8e86b5 solid;
+    border-bottom: 1px #8e86b5 solid;
+    background-color: #1F2039;
+    padding: 50px;
+}
+.cadre h2{
+    margin-top: 30px;
+}
+.cadre ul{
+    margin-top: 30px;
+}
+.a-propos-main {
+    width: 50%;
+    margin: auto;
+}
+
+/* PAGE POTRFOLIO */
+
 .portfolio-section-photos h2 {
     color: #242424;
     margin-bottom: 80px;
     font-size: 2.4em;
 }
-.portfolio-section-photos h2:nth-of-type(2){
+.portfolio-section-photos h2:nth-of-type(2){  /* Ne s'applique qu'au 2eme h2 de la classe*/
     margin-top: 80px;
 }
 .grid-portrait img, .grid-voyage img {
@@ -152,4 +162,26 @@ header nav{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 300px 300px;
     gap: 15px;
+}
+.lien-photo-portfolio{
+    position: relative;
+}
+.voir-photo-hover{
+    /*display: block; Convertit l'inline texte en un block dont on pourra donner la taille voulue (égale à celle de l'image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* On définit l'inscription "voir la photo" comme un block flex (on va pouvoir modifier sa taille) et sa position */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s; /*Ajouter une transition pour un effet plus doux */
+} 
+.lien-photo-portfolio:hover .voir-photo-hover{ /*Au survol des photos, on fait réaparaitre le block "Voir la photo" sur la photo*/
+    /* On applique le style au bloc .voir-photo-hover uniquement lorsque son parent .lien-photo-portfolio est survolé, il n'y a donc pas de virgule entre les deux*/
+    display:flex;
 }
