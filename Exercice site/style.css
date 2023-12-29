@@ -1,0 +1,155 @@
+
+body {
+    /* Ici on utilise le sélecteur body pour appliquer une police et une taille par défaut pour les éléments */
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #1F2039;
+}
+* {
+    margin: 0;
+}
+
+
+a {
+    color:black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.violet:hover{
+    background-color: linear-gradient(#696484, #8788BA);
+    text-decoration: none;
+}
+em {
+    color: #a5b4fc;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    color: #A5B4FC;
+}
+h2{
+    color: #F9F8FF;
+}
+p,li{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1em;
+    color: #F9F8FF;
+}
+/* div{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: white;
+    color: #242424;
+} */
+
+div .violet, .texte-accueil .violet {
+    background: linear-gradient(#8e86b5, #acaeed);
+    color: white;
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: inline-block; /* Permet d'appliquer padding et margin */
+    margin-top: 20px; /* Espace au-dessus du bouton */
+}
+footer, header{
+    background-color: white;
+    padding: 20px 50px 20px 50px;
+}
+.cadre{
+    border-right: 1px #8e86b5 solid;
+    border-bottom: 1px #8e86b5 solid;
+    background-color: #1F2039;
+    padding: 50px;
+}
+footer img:hover, header img:hover{
+    opacity: 0.5;
+}
+/* .lien-icone:hover {
+    opacity: 0.5; */
+section{
+    padding: 80px;
+    margin: 70px;
+}
+.a-propos-main {
+    width: 50%;
+    margin: auto;
+}
+.cadre h2{
+    margin-top: 30px;
+}
+.cadre ul{
+    margin-top: 30px;
+}
+section[class="mon-dernier-projet"], section[class="portfolio-section-photos"]{
+    background-color: white;
+    margin: 0px;  /* Faire la toute largeur de la section blanche */
+}
+section[class="mon-dernier-projet"] h2 {
+    color: #242424;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 2.4em;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu a {
+    margin: 0 50px;
+    text-decoration: none;
+}
+.description-accueil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Espace autour du contenu */
+    gap: 170px; /* Espace entre les éléments flex */
+}
+.texte-accueil {
+    max-width: 30%; /* Maximum 25% de la largeur du conteneur */
+
+}
+.projet-photos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; /* Espace autour du contenu */
+    gap: 30px; /* Espace entre les éléments flex */
+    flex-wrap: wrap;
+}
+
+.portfolio-section-photos h2 {
+    color: #242424;
+    margin-bottom: 80px;
+    font-size: 2.4em;
+}
+.portfolio-section-photos h2:nth-of-type(2){
+    margin-top: 80px;
+}
+.grid-portrait img, .grid-voyage img {
+    width: 100%;
+    height: 100%;
+    /* Même si vous ne connaissez pas cette propriété, vous en aurez besoin pour permettre aux images de respecter les dimensions de la grid CSS */
+    object-fit: cover;
+}
+.grid-voyage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    gap:15px;
+}
+.grid-portrait{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 15px;
+}
