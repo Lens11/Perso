@@ -1,0 +1,36 @@
+/* PAGE A PROPOS */
+
+.cadre{
+    border-right: 1px #8e86b5 solid;
+    border-bottom: 1px #8e86b5 solid;
+    background-color: #1F2039;
+    padding: 50px;
+}
+.cadre h2{
+    margin-top: 30px;
+}
+.cadre ul{
+    margin-top: 30px;
+}
+.a-propos-main {
+    width: 50%;
+    margin: auto;
+}
+.tarifs h2{
+    margin-bottom: 80px;
+    text-align: center;
+}
+th, td{
+    padding: 15px;
+    border: 1px solid #F9F8FF;
+}
+td{
+    padding: 80px;
+}
+table{
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}

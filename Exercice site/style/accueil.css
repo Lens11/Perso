@@ -1,0 +1,30 @@
+/* PAGE ACCUEIL */
+
+.description-accueil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Espace autour du contenu */
+    gap: 170px; /* Espace entre les éléments flex */
+}
+.texte-accueil {
+    max-width: 30%; /* Maximum 25% de la largeur du conteneur */
+}
+section[class="mon-dernier-projet"], section[class="portfolio-section-photos"]{
+    background-color: white;
+    margin: 0px;  /* Faire la toute largeur de la section blanche */
+}
+section[class="mon-dernier-projet"] h2 {
+    color: #242424;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 2.4em;
+}
+.projet-photos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; /* Espace autour du contenu */
+    gap: 30px; /* Espace entre les éléments flex */
+    flex-wrap: wrap;
+}

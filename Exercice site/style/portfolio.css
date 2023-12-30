@@ -1,0 +1,52 @@
+/* PAGE POTRFOLIO */
+.portfolio-section-photos{
+    background-color: white;
+}
+.portfolio-section-photos h2 {
+    color: #242424;
+    margin-bottom: 80px;
+    font-size: 2.4em;
+}
+.portfolio-section-photos h2:nth-of-type(2){  /* Ne s'applique qu'au 2eme h2 de la classe*/
+    margin-top: 80px;
+}
+.grid-portrait img, .grid-voyage img {
+    width: 100%;
+    height: 100%;
+    /* Même si vous ne connaissez pas cette propriété, vous en aurez besoin pour permettre aux images de respecter les dimensions de la grid CSS */
+    object-fit: cover;
+}
+.grid-voyage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    gap:15px;
+}
+.grid-portrait{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 15px;
+}
+.lien-photo-portfolio{
+    position: relative;
+}
+.voir-photo-hover{
+    /*display: block; Convertit l'inline texte en un block dont on pourra donner la taille voulue (égale à celle de l'image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* On définit l'inscription "voir la photo" comme un block flex (on va pouvoir modifier sa taille) et sa position */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s; /*Ajouter une transition pour un effet plus doux */
+} 
+.lien-photo-portfolio:hover .voir-photo-hover{ /*Au survol des photos, on fait réaparaitre le block "Voir la photo" sur la photo*/
+    /* On applique le style au bloc .voir-photo-hover uniquement lorsque son parent .lien-photo-portfolio est survolé, il n'y a donc pas de virgule entre les deux*/
+    display:flex;
+}
