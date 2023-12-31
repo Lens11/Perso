@@ -30,8 +30,8 @@ p,li{
         color: #F9F8FF;
 }
 section{
-    padding: 80px;
-    margin: 70px;
+    padding: 40px;
+    margin: 40px;
 }
 em {
     color: #a5b4fc;
@@ -72,7 +72,7 @@ header nav{
 
 /* ENCADRE VIOLET */
 
-div .violet, .texte-accueil .violet {
+div .violet, .texte-accueil .violet{
     background: linear-gradient(#8e86b5, #acaeed);
     color: white;
     border-radius: 50px;

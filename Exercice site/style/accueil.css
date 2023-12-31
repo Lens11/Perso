@@ -28,3 +28,73 @@ section[class="mon-dernier-projet"] h2 {
     gap: 30px; /* Espace entre les éléments flex */
     flex-wrap: wrap;
 }
+
+
+.formulaire-contact h2{
+    color: #A5B4FC;
+    text-align: center;
+    font-size: 2.4em;
+    padding-bottom: 30px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin: auto;
+    width: 40%;
+}
+.identite-form {
+    display: flex;
+    justify-content: space-between; /* Sépare les conteneurs */
+}
+.champ {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espace entre les champs, ajustez selon besoin */
+}
+
+.identite-form label {
+    margin-bottom: 0.2em; /* Espace entre le label et l'input */
+}
+
+.identite-form input {
+    margin-bottom: 1em; /* Espace en-dessous de l'input */
+}
+/* .identite-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 30px;
+} */
+.message-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+label{
+    color: white;
+    margin-bottom: 10px;
+}
+input, textarea{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+input[type="email"], input[type="text"]{
+    width: 100%;
+}
+input[type="submit"]{
+    background: linear-gradient(#8e86b5, #acaeed);
+    color: white;
+    width: 200px;
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block; /* On le définit block, ce qui permet d'appliquer padding et margin mais aussi en inline pour le laisser à la suite*/
+    margin-top: 30px; /* Espace au-dessus du bouton */
+    margin-bottom: 30px; /* Espace en-dessous du bouton */
+    margin-left: auto; /* Centrage du bouton */
+    margin-right: auto; /* Centrage du bouton */
+}
