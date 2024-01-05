@@ -41,16 +41,11 @@ form{
     flex-direction: column;
     padding: 50px;
     margin: auto;
-    width: 40%;
+    width: 50%;
 }
 .identite-form {
     display: flex;
     justify-content: space-between; /* Sépare les conteneurs */
-}
-.champ {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; /* Espace entre les champs, ajustez selon besoin */
 }
 
 .identite-form label {
@@ -59,14 +54,14 @@ form{
 
 .identite-form input {
     margin-bottom: 1em; /* Espace en-dessous de l'input */
+    padding: 15px;
 }
-/* .identite-form{
+.identite-form{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
-    padding-bottom: 30px;
-} */
+    gap: 20px; /*Permet de modifier l'écart entre les 2 champs*/
+} 
 .message-form{
     display: flex;
     flex-direction: column;
@@ -81,11 +76,17 @@ input, textarea{
     width: 100%;
     border: none;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
-input[type="email"], input[type="text"]{
-    width: 100%;
+.champ {
+    flex: 1; /* Permet aux champs de remplir l'espace équitablement */
+    margin-right: 30px; /* Espacement à droite de chaque champ */
 }
+
+.champ:last-child {
+    margin-right: 0; /* Assurez-vous que le dernier champ n'ait pas de marge à droite */
+}
+
 input[type="submit"]{
     background: linear-gradient(#8e86b5, #acaeed);
     color: white;
