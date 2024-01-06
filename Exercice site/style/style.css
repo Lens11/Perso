@@ -30,8 +30,8 @@ p,li{
         color: #F9F8FF;
 }
 section{
-    padding: 40px;
-    margin: 40px;
+    padding: 80px;
+
 }
 em {
     color: #a5b4fc;
@@ -39,8 +39,14 @@ em {
 }
 
 /* FOOTER ET HEADER  */
-
-footer, header{
+footer{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px 20px 50px;
+}
+header{
     background-color: white;
     padding: 20px 50px 20px 50px;
 }
@@ -83,4 +89,55 @@ div .violet, .texte-accueil .violet{
 .violet:hover{
     background-color: linear-gradient(#696484, #8788BA);
     text-decoration: none;
+}
+
+
+/* Responsive design */
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 996px){
+    .grid-voyage, .grid-portrait {
+        grid-template-columns: 1fr; /* Les images s'afficheront en une seule colonne */
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.6em;
+    }
+    .tarifs{
+        display: none; /* On cache la section */
+    }
+    header nav, footer nav{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header,
+    footer {
+        padding: 20px 20px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section{
+        padding: 50px 20px 50px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu, .logo-footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Espace entre les éléments */
+        margin-top: 20px;
+    }
+
+    .menu a, .logo-footer a {
+        margin: 10px 0; /* Espacement vertical entre les liens */
+    }
 }
